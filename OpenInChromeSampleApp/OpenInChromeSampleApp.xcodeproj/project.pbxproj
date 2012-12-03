@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1C1043B162FF67C0074F0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C1043A162FF67C0074F0BA /* UIKit.framework */; };
+		D1C1043D162FF67C0074F0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C1043C162FF67C0074F0BA /* Foundation.framework */; };
+		D1C1043F162FF67C0074F0BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C1043E162FF67C0074F0BA /* CoreGraphics.framework */; };
+		D1C10445162FF67C0074F0BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1C10443162FF67C0074F0BA /* InfoPlist.strings */; };
+		D1C10447162FF67C0074F0BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C10446162FF67C0074F0BA /* main.m */; };
+		D1C1044B162FF67C0074F0BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C1044A162FF67C0074F0BA /* AppDelegate.m */; };
+		D1C1044D162FF67C0074F0BA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C1044C162FF67C0074F0BA /* Default.png */; };
+		D1C1044F162FF67C0074F0BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C1044E162FF67C0074F0BA /* Default@2x.png */; };
+		D1C10451162FF67C0074F0BA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C10450162FF67C0074F0BA /* Default-568h@2x.png */; };
+		D1C10454162FF67C0074F0BA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C10453162FF67C0074F0BA /* MainViewController.m */; };
+		D1C1045A162FF67C0074F0BA /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C10458162FF67C0074F0BA /* MainViewController_iPhone.xib */; };
+		D1C1045D162FF67C0074F0BA /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C1045B162FF67C0074F0BA /* MainViewController_iPad.xib */; };
+		D1C10468162FF69A0074F0BA /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C10467162FF69A0074F0BA /* OpenInChromeController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D1C10436162FF67B0074F0BA /* OpenInChromeSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenInChromeSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C1043A162FF67C0074F0BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D1C1043C162FF67C0074F0BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D1C1043E162FF67C0074F0BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D1C10442162FF67C0074F0BA /* OpenInChromeSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenInChromeSampleApp-Info.plist"; sourceTree = "<group>"; };
+		D1C10444162FF67C0074F0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D1C10446162FF67C0074F0BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1C10448162FF67C0074F0BA /* OpenInChromeSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenInChromeSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		D1C10449162FF67C0074F0BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D1C1044A162FF67C0074F0BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D1C1044C162FF67C0074F0BA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D1C1044E162FF67C0074F0BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D1C10450162FF67C0074F0BA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D1C10452162FF67C0074F0BA /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D1C10453162FF67C0074F0BA /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D1C10459162FF67C0074F0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
+		D1C1045C162FF67C0074F0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
+		D1C10466162FF69A0074F0BA /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenInChromeController.h; path = ../../OpenInChromeController.h; sourceTree = "<group>"; };
+		D1C10467162FF69A0074F0BA /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenInChromeController.m; path = ../../OpenInChromeController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C10433162FF67B0074F0BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C1043B162FF67C0074F0BA /* UIKit.framework in Frameworks */,
+				D1C1043D162FF67C0074F0BA /* Foundation.framework in Frameworks */,
+				D1C1043F162FF67C0074F0BA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1C1042B162FF67B0074F0BA = {
+			isa = PBXGroup;
+			children = (
+				D1C10440162FF67C0074F0BA /* OpenInChromeSampleApp */,
+				D1C10439162FF67C0074F0BA /* Frameworks */,
+				D1C10437162FF67B0074F0BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1C10437162FF67B0074F0BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1C10436162FF67B0074F0BA /* OpenInChromeSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1C10439162FF67C0074F0BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1C1043A162FF67C0074F0BA /* UIKit.framework */,
+				D1C1043C162FF67C0074F0BA /* Foundation.framework */,
+				D1C1043E162FF67C0074F0BA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1C10440162FF67C0074F0BA /* OpenInChromeSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				D1C10449162FF67C0074F0BA /* AppDelegate.h */,
+				D1C1044A162FF67C0074F0BA /* AppDelegate.m */,
+				D1C10452162FF67C0074F0BA /* MainViewController.h */,
+				D1C10453162FF67C0074F0BA /* MainViewController.m */,
+				D1C10458162FF67C0074F0BA /* MainViewController_iPhone.xib */,
+				D1C1045B162FF67C0074F0BA /* MainViewController_iPad.xib */,
+				D1C10466162FF69A0074F0BA /* OpenInChromeController.h */,
+				D1C10467162FF69A0074F0BA /* OpenInChromeController.m */,
+				D1C10441162FF67C0074F0BA /* Supporting Files */,
+			);
+			path = OpenInChromeSampleApp;
+			sourceTree = "<group>";
+		};
+		D1C10441162FF67C0074F0BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1C10442162FF67C0074F0BA /* OpenInChromeSampleApp-Info.plist */,
+				D1C10443162FF67C0074F0BA /* InfoPlist.strings */,
+				D1C10446162FF67C0074F0BA /* main.m */,
+				D1C10448162FF67C0074F0BA /* OpenInChromeSampleApp-Prefix.pch */,
+				D1C1044C162FF67C0074F0BA /* Default.png */,
+				D1C1044E162FF67C0074F0BA /* Default@2x.png */,
+				D1C10450162FF67C0074F0BA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1C10435162FF67B0074F0BA /* OpenInChromeSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1C10463162FF67C0074F0BA /* Build configuration list for PBXNativeTarget "OpenInChromeSampleApp" */;
+			buildPhases = (
+				D1C10432162FF67B0074F0BA /* Sources */,
+				D1C10433162FF67B0074F0BA /* Frameworks */,
+				D1C10434162FF67B0074F0BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenInChromeSampleApp;
+			productName = OpenInChromeSampleApp;
+			productReference = D1C10436162FF67B0074F0BA /* OpenInChromeSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1C1042D162FF67B0074F0BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Google Inc.";
+			};
+			buildConfigurationList = D1C10430162FF67B0074F0BA /* Build configuration list for PBXProject "OpenInChromeSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D1C1042B162FF67B0074F0BA;
+			productRefGroup = D1C10437162FF67B0074F0BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1C10435162FF67B0074F0BA /* OpenInChromeSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1C10434162FF67B0074F0BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C10445162FF67C0074F0BA /* InfoPlist.strings in Resources */,
+				D1C1044D162FF67C0074F0BA /* Default.png in Resources */,
+				D1C1044F162FF67C0074F0BA /* Default@2x.png in Resources */,
+				D1C10451162FF67C0074F0BA /* Default-568h@2x.png in Resources */,
+				D1C1045A162FF67C0074F0BA /* MainViewController_iPhone.xib in Resources */,
+				D1C1045D162FF67C0074F0BA /* MainViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1C10432162FF67B0074F0BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C10447162FF67C0074F0BA /* main.m in Sources */,
+				D1C1044B162FF67C0074F0BA /* AppDelegate.m in Sources */,
+				D1C10454162FF67C0074F0BA /* MainViewController.m in Sources */,
+				D1C10468162FF69A0074F0BA /* OpenInChromeController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D1C10443162FF67C0074F0BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1C10444162FF67C0074F0BA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D1C10458162FF67C0074F0BA /* MainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1C10459162FF67C0074F0BA /* en */,
+			);
+			name = MainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		D1C1045B162FF67C0074F0BA /* MainViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1C1045C162FF67C0074F0BA /* en */,
+			);
+			name = MainViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1C10461162FF67C0074F0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1C10462162FF67C0074F0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1C10464162FF67C0074F0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenInChromeSampleApp/OpenInChromeSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "OpenInChromeSampleApp/OpenInChromeSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D1C10465162FF67C0074F0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenInChromeSampleApp/OpenInChromeSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "OpenInChromeSampleApp/OpenInChromeSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1C10430162FF67B0074F0BA /* Build configuration list for PBXProject "OpenInChromeSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1C10461162FF67C0074F0BA /* Debug */,
+				D1C10462162FF67C0074F0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1C10463162FF67C0074F0BA /* Build configuration list for PBXNativeTarget "OpenInChromeSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1C10464162FF67C0074F0BA /* Debug */,
+				D1C10465162FF67C0074F0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1C1042D162FF67B0074F0BA /* Project object */;
+}
