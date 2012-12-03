@@ -20,7 +20,7 @@ if ([openInController_ isChromeInstalled]) {
 ```
 
 ## Downloading the class file ##
-The OpenInChromeController class file is available [here](https://code.google.com/a/google.com/p/openinchrome/source/browse/). Copy it into your Xcode installation.
+The OpenInChromeController class file is available [here](https://github.com/GoogleChrome/OpenInChrome). Copy it into your Xcode installation.
 
 The rest of this document describes the underpinnings of this API.
 
@@ -78,7 +78,7 @@ If Chrome is not installed the user can be prompted to download it from the App 
 ```
 
 ## Using the x-callback-url registration scheme to return ##
-Chrome for iOS also supports [http://x-callback-url.com/specifications/ x-callback-url], an open specification for inter-app communications and messaging between iOS apps that provides a way for the application opened in Chrome to specify a callback URL to return to the calling app. Applications supporting `x-callback-url` have to register a URL scheme that will be used to call the app with compliant URLs.
+Chrome for iOS also supports [x-callback-url](http://x-callback-url.com/specifications/), an open specification for inter-app communications and messaging between iOS apps that provides a way for the application opened in Chrome to specify a callback URL to return to the calling app. Applications supporting `x-callback-url` have to register a URL scheme that will be used to call the app with compliant URLs.
 
 The URI scheme that Chrome registers for x-callback-url is:
   * `googlechrome-x-callback`
