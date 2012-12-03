@@ -20,7 +20,7 @@ if ([openInController_ isChromeInstalled]) {
 ```
 
 ## Downloading the class file ##
-The OpenInChromeController class file is available [https://code.google.com/a/google.com/p/openinchrome/source/browse/ here]. Copy it into your Xcode installation.
+The OpenInChromeController class file is available [here](https://code.google.com/a/google.com/p/openinchrome/source/browse/). Copy it into your Xcode installation.
 
 The rest of this document describes the underpinnings of this API.
 
