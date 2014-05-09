@@ -31,13 +31,9 @@
 
 @class MainViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
- @private
-  UIWindow *window_;
-  MainViewController *mainViewController_;
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) MainViewController *mainViewController;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) MainViewController *mainViewController;
 
 @end

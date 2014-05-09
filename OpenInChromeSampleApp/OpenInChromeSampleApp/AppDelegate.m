@@ -33,27 +33,18 @@
 
 @implementation AppDelegate
 
-@synthesize window = window_;
-@synthesize mainViewController = mainViewController_;
-
-- (void)dealloc {
-  [window_ release];
-  [mainViewController_ release];
-  [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  self.window = [[[UIWindow alloc]
-      initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+  self.window = [[UIWindow alloc]
+      initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
   if ([[UIDevice currentDevice] userInterfaceIdiom] ==
       UIUserInterfaceIdiomPhone) {
-    self.mainViewController = [[[MainViewController alloc]
-        initWithNibName:@"MainViewController_iPhone" bundle:nil] autorelease];
+    self.mainViewController = [[MainViewController alloc]
+        initWithNibName:@"MainViewController_iPhone" bundle:nil];
   } else {
-    self.mainViewController = [[[MainViewController alloc]
-        initWithNibName:@"MainViewController_iPad" bundle:nil] autorelease];
+    self.mainViewController = [[MainViewController alloc]
+        initWithNibName:@"MainViewController_iPad" bundle:nil];
   }
   self.window.rootViewController = self.mainViewController;
   [self.window makeKeyAndVisible];
@@ -64,7 +55,7 @@
               openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication
            annotation:(id)annotation {
-  [mainViewController_ appendToInfoView:
+  [self.mainViewController appendToInfoView:
       [NSString stringWithFormat:@"Callback called with URL: %@", url]];
   return YES;
 }

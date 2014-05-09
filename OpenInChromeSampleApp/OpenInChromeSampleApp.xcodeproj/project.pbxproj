@@ -272,6 +272,7 @@
 		D1C10464162FF67C0074F0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenInChromeSampleApp/OpenInChromeSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "OpenInChromeSampleApp/OpenInChromeSampleApp-Info.plist";
@@ -285,6 +286,7 @@
 		D1C10465162FF67C0074F0BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenInChromeSampleApp/OpenInChromeSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "OpenInChromeSampleApp/OpenInChromeSampleApp-Info.plist";
@@ -314,6 +316,7 @@
 				D1C10465162FF67C0074F0BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
