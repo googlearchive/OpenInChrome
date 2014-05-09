@@ -1,4 +1,8 @@
-// Copyright 2012, Google Inc.
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "This file requires ARC support."
+#endif
+
+// Copyright 2012-2014, Google Inc.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -33,15 +37,14 @@
 
 static NSString * const kGoogleChromeHTTPScheme = @"googlechrome:";
 static NSString * const kGoogleChromeHTTPSScheme = @"googlechromes:";
-static NSString * const kGoogleChromeCallbackScheme =
-    @"googlechrome-x-callback:";
+static NSString * const kGoogleChromeCallbackScheme = @"googlechrome-x-callback:";
 
 static NSString *encodeByAddingPercentEscapes(NSString *input) {
   NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
       kCFAllocatorDefault,
-      (CFStringRef) input,
+      (CFStringRef)input,
       NULL,
-      (CFStringRef) @"!*'();:@&=+$,/?%#[]",
+      (CFStringRef)@"!*'();:@&=+$,/?%#[]",
       kCFStringEncodingUTF8));
   return encodedValue;
 }
