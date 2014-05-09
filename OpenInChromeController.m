@@ -36,15 +36,14 @@ static NSString * const kGoogleChromeHTTPSScheme = @"googlechromes:";
 static NSString * const kGoogleChromeCallbackScheme =
     @"googlechrome-x-callback:";
 
-static NSString * encodeByAddingPercentEscapes(NSString *input) {
-  NSString *encodedValue =
-      (NSString *)CFURLCreateStringByAddingPercentEscapes(
-          kCFAllocatorDefault,
-          (CFStringRef)input,
-          NULL,
-          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-          kCFStringEncodingUTF8);
-  return [encodedValue autorelease];
+static NSString *encodeByAddingPercentEscapes(NSString *input) {
+  NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+      kCFAllocatorDefault,
+      (CFStringRef) input,
+      NULL,
+      (CFStringRef) @"!*'();:@&=+$,/?%#[]",
+      kCFStringEncodingUTF8));
+  return encodedValue;
 }
 
 @implementation OpenInChromeController

@@ -28,7 +28,6 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "MainViewController.h"
-
 #import "OpenInChromeController.h"
 
 @interface MainViewController ()
@@ -37,26 +36,10 @@
 
 @implementation MainViewController
 
-@synthesize addressField = addressField_;
-@synthesize openInButton = openInButton_;
-@synthesize infoView = infoView_;
-
-- (void)dealloc {
-  [openInChromeController_ release];
-  [addressField_ release];
-  [openInButton_ release];
-  [infoView_ release];
-  [super dealloc];
-}
-
-- (void)viewDidLoad {
-  openInChromeController_ = [[OpenInChromeController alloc] init];
-}
-
 - (void)update {
-  openInButton_.enabled = [openInChromeController_ isChromeInstalled];
+  _openInButton.enabled = [[OpenInChromeController sharedInstance] isChromeInstalled];
   [self appendToInfoView:[NSString stringWithFormat:@"Chrome installed: %@",
-                          openInButton_.enabled ? @"YES" : @"NO"]];
+                          _openInButton.enabled ? @"YES" : @"NO"]];
 
 }
 
@@ -66,16 +49,15 @@
 }
 
 - (IBAction)openInChrome:(id)sender {
-  NSURL *url = [NSURL URLWithString:addressField_.text];
-  [self appendToInfoView:[NSString stringWithFormat:@"Opening %@ in Chrome",
-                          url]];
+  NSURL *url = [NSURL URLWithString:_addressField.text];
+  [self appendToInfoView:[NSString stringWithFormat:@"Opening %@ in Chrome", url]];
   NSURL *callbackURL = [NSURL URLWithString:@"myapp://"];
 
-  BOOL success = [openInChromeController_ openInChrome:url
-                                       withCallbackURL:callbackURL
-                                          createNewTab:NO];
+  BOOL success = [[OpenInChromeController sharedInstance] openInChrome:url
+                                                       withCallbackURL:callbackURL
+                                                          createNewTab:NO];
   [self appendToInfoView:[NSString stringWithFormat:@"Open in Chrome was %@",
-                          success ? @"successful" : @"unsuccessful"]];
+      success ? @"successful" : @"unsuccessful"]];
 }
 
 - (void)appendToInfoView:(NSString *)message {

@@ -29,17 +29,11 @@
 
 @class OpenInChromeController;
 
-@interface MainViewController : UIViewController {
- @private
-  UITextField *addressField_;
-  UIButton *openInButton_;
-  UITextView *infoView_;
-  OpenInChromeController *openInChromeController_;
-}
+@interface MainViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UITextField *addressField;
-@property (nonatomic, retain) IBOutlet UIButton *openInButton;
-@property (nonatomic, retain) IBOutlet UITextView *infoView;
+@property (nonatomic, weak) IBOutlet UITextField *addressField;
+@property (nonatomic, weak) IBOutlet UIButton *openInButton;
+@property (nonatomic, weak) IBOutlet UITextView *infoView;
 
 - (IBAction)openInChrome:(id)sender;
 - (void)appendToInfoView:(NSString *)message;
