@@ -143,6 +143,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Google Inc.";
+				TargetAttributes = {
+					D1C10435162FF67B0074F0BA = {
+						DevelopmentTeam = EQHXZ8M8AV;
+					};
+				};
 			};
 			buildConfigurationList = D1C10430162FF67B0074F0BA /* Build configuration list for PBXProject "OpenInChromeSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -273,10 +278,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEVELOPMENT_TEAM = EQHXZ8M8AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenInChromeSampleApp/OpenInChromeSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "OpenInChromeSampleApp/OpenInChromeSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -287,10 +293,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEVELOPMENT_TEAM = EQHXZ8M8AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenInChromeSampleApp/OpenInChromeSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "OpenInChromeSampleApp/OpenInChromeSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
