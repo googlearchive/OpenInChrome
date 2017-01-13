@@ -51,11 +51,8 @@
 - (IBAction)openInChrome:(id)sender {
   NSURL *url = [NSURL URLWithString:_addressField.text];
   [self appendToInfoView:[NSString stringWithFormat:@"Opening %@ in Chrome", url]];
-  NSURL *callbackURL = [NSURL URLWithString:@"myapp://"];
 
-  BOOL success = [[OpenInChromeController sharedInstance] openInChrome:url
-                                                       withCallbackURL:callbackURL
-                                                          createNewTab:NO];
+  BOOL success = [[OpenInChromeController sharedInstance] openInChrome:url];
   [self appendToInfoView:[NSString stringWithFormat:@"Open in Chrome was %@",
       success ? @"successful" : @"unsuccessful"]];
 }

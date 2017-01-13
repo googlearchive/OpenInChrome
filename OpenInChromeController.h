@@ -30,7 +30,7 @@
 #import <Foundation/Foundation.h>
 
 // This class is used to check if Google Chrome is installed in the system and
-// to open a URL in Google Chrome either with or without a callback URL.
+// to open a URL in Google Chrome.
 @interface OpenInChromeController : NSObject
 
 // Returns a shared instance of the OpenInChromeController.
@@ -42,13 +42,13 @@
 // Opens a URL in Google Chrome.
 - (BOOL)openInChrome:(NSURL *)url;
 
-// Open a URL in Google Chrome providing a |callbackURL| to return to the app.
-// URLs from the same app will be opened in the same tab unless |createNewTab|
-// is set to YES.
-// |callbackURL| can be nil.
-// The return value of this method is YES if the URL is successfully opened.
+// iOS displays a "Back to app" link on the device's status line if app was
+// launched from another app. This makes the |callbackURL| parameter much less
+// useful. Chrome has stopped processing the callback URL and create new tab
+// options.
+// @warning DEPRECATED: Please use -openInChrome: directly.
 - (BOOL)openInChrome:(NSURL *)url
      withCallbackURL:(NSURL *)callbackURL
-        createNewTab:(BOOL)createNewTab;
+        createNewTab:(BOOL)createNewTab __attribute__((deprecated));
 
 @end

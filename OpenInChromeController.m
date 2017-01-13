@@ -37,17 +37,6 @@
 
 static NSString * const kGoogleChromeHTTPScheme = @"googlechrome:";
 static NSString * const kGoogleChromeHTTPSScheme = @"googlechromes:";
-static NSString * const kGoogleChromeCallbackScheme = @"googlechrome-x-callback:";
-
-static NSString *encodeByAddingPercentEscapes(NSString *input) {
-  NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-      kCFAllocatorDefault,
-      (CFStringRef)input,
-      NULL,
-      (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-      kCFStringEncodingUTF8));
-  return encodedValue;
-}
 
 @implementation OpenInChromeController
 
@@ -62,53 +51,12 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 
 - (BOOL)isChromeInstalled {
   NSURL *simpleURL = [NSURL URLWithString:kGoogleChromeHTTPScheme];
-  NSURL *callbackURL = [NSURL URLWithString:kGoogleChromeCallbackScheme];
-  return  [[UIApplication sharedApplication] canOpenURL:simpleURL] ||
-      [[UIApplication sharedApplication] canOpenURL:callbackURL];
+  return [[UIApplication sharedApplication] canOpenURL:simpleURL];
 }
 
 - (BOOL)openInChrome:(NSURL *)url {
-  return [self openInChrome:url withCallbackURL:nil createNewTab:NO];
-}
-
-- (BOOL)openInChrome:(NSURL *)url
-     withCallbackURL:(NSURL *)callbackURL
-        createNewTab:(BOOL)createNewTab {
-  NSURL *chromeSimpleURL = [NSURL URLWithString:kGoogleChromeHTTPScheme];
-  NSURL *chromeCallbackURL = [NSURL URLWithString:kGoogleChromeCallbackScheme];
-  if ([[UIApplication sharedApplication] canOpenURL:chromeCallbackURL]) {
-    NSString *appName =
-        [[NSBundle mainBundle]
-            objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-
+  if ([self isChromeInstalled]) {
     NSString *scheme = [url.scheme lowercaseString];
-
-    // Proceed only if scheme is http or https.
-    if ([scheme isEqualToString:@"http"] ||
-        [scheme isEqualToString:@"https"]) {
-
-      NSMutableString *chromeURLString = [NSMutableString string];
-      [chromeURLString appendFormat:
-          @"%@//x-callback-url/open/?x-source=%@&url=%@",
-          kGoogleChromeCallbackScheme,
-          encodeByAddingPercentEscapes(appName),
-          encodeByAddingPercentEscapes([url absoluteString])];
-      if (callbackURL) {
-        [chromeURLString appendFormat:@"&x-success=%@",
-            encodeByAddingPercentEscapes([callbackURL absoluteString])];
-      }
-      if (createNewTab) {
-        [chromeURLString appendString:@"&create-new-tab"];
-      }
-
-      NSURL *chromeURL = [NSURL URLWithString:chromeURLString];
-
-      // Open the URL with Google Chrome.
-      return [[UIApplication sharedApplication] openURL:chromeURL];
-    }
-  } else if ([[UIApplication sharedApplication] canOpenURL:chromeSimpleURL]) {
-    NSString *scheme = [url.scheme lowercaseString];
-
     // Replace the URL Scheme with the Chrome equivalent.
     NSString *chromeScheme = nil;
     if ([scheme isEqualToString:@"http"]) {
@@ -126,7 +74,6 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
       NSString *chromeURLString =
           [chromeScheme stringByAppendingString:urlNoScheme];
       NSURL *chromeURL = [NSURL URLWithString:chromeURLString];
-
       // Open the URL with Google Chrome.
       return [[UIApplication sharedApplication] openURL:chromeURL];
     }
@@ -134,4 +81,10 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
   return NO;
 }
 
+- (BOOL)openInChrome:(NSURL *)url
+     withCallbackURL:(NSURL *)callbackURL
+        createNewTab:(BOOL)createNewTab {
+  // This deprecated API simply calls the supported -openInChrome: API.
+  return [self openInChrome:url];
+}
 @end
